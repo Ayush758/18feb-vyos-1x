@@ -14,11 +14,11 @@ service {
             address "fe80::/10"
             address "fc00::/7"
         }
-        server time1.vyos.net {
+        server time1.google.com {
         }
-        server time2.vyos.net {
+        server time2.google.com {
         }
-        server time3.vyos.net {
+        server time3.google.com {
         }
     }
 }
@@ -31,11 +31,11 @@ system {
             speed "115200"
         }
     }
-    host-name "vyos"
+    host-name "devray"
     login {
         user devray {
             authentication {
-                encrypted-password "$6$QxPS.uk6mfo$9QBSo8u1FkH16gMyAVhus6fU3LOzvLR9Z9.82m3tiHFAxTtIkhaZSWssSgzt4v4dGAL8rhVQxTg0oAG9/q11h/"
+                encrypted-password "$6$BKTwugKr1NG2E2Oy$ybiv71R8nwNqy77ADUySsgdlscUm8ib0EgIQbqIVHKkPrznsTUqejn9pUJLLITqoa3EtE3vd3HRkBSDGh1Ylv1"
                 plaintext-password ""
             }
         }

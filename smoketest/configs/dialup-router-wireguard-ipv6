@@ -1463,9 +1463,9 @@ system {
         allow-clients {
             address 172.16.0.0/12
         }
-        server time1.vyos.net {
+        server time1.google.com {
         }
-        server time2.vyos.net {
+        server time2.google.com {
         }
     }
     option {

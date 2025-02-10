@@ -55,11 +55,11 @@ system {
         }
     }
     ntp {
-        server time1.vyos.net {
+        server time1.google.com {
         }
-        server time2.vyos.net {
+        server time2.google.com {
         }
-        server time3.vyos.net {
+        server time3.google.com {
         }
     }
     syslog {

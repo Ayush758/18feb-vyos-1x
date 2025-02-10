@@ -188,9 +188,9 @@ service {
             address "192.168.189.0/24"
         }
         listen-address "192.168.189.1"
-        server time1.vyos.net {
+        server time1.google.com {
         }
-        server time2.vyos.net {
+        server time2.google.com {
         }
     }
     router-advert {

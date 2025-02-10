@@ -153,9 +153,9 @@ system {
     }
     name-server 172.16.254.30
     ntp {
-        server time1.vyos.net {
+        server time1.google.com {
         }
-        server time2.vyos.net {
+        server time2.google.com {
         }
     }
     sysctl {

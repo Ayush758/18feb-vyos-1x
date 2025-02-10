@@ -32,7 +32,7 @@ class TestInitialSetup(TestCase):
         vis.set_user_password(self.config, 'vyos', 'vyosvyos')
 
         # Old password hash from the default config
-        old_pw = '$6$QxPS.uk6mfo$9QBSo8u1FkH16gMyAVhus6fU3LOzvLR9Z9.82m3tiHFAxTtIkhaZSWssSgzt4v4dGAL8rhVQxTg0oAG9/q11h/'
+        old_pw = '$6$BKTwugKr1NG2E2Oy$ybiv71R8nwNqy77ADUySsgdlscUm8ib0EgIQbqIVHKkPrznsTUqejn9pUJLLITqoa3EtE3vd3HRkBSDGh1Ylv1'
         new_pw = self.config.return_value(["system", "login", "user", "vyos", "authentication", "encrypted-password"])
 
         # Just check it changed the hash, don't try to check if hash is good

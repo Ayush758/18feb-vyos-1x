@@ -113,7 +113,7 @@ class TestSystemNTP(VyOSUnitTestSHIM.TestCase):
         for interface in interfaces:
             self.cli_set(base_path + ['interface', interface])
 
-        servers = ['time1.vyos.net', 'time2.vyos.net']
+        servers = ['time1.google.com', 'time2.google.com']
         for server in servers:
             self.cli_set(base_path + ['server', server])
 
@@ -131,7 +131,7 @@ class TestSystemNTP(VyOSUnitTestSHIM.TestCase):
         self.cli_set(['vrf', 'name', vrf_name, 'table', '12345'])
         self.cli_set(base_path + ['vrf', vrf_name])
 
-        servers = ['time1.vyos.net', 'time2.vyos.net']
+        servers = ['time1.google.com', 'time2.google.com']
         for server in servers:
             self.cli_set(base_path + ['server', server])
 
@@ -144,7 +144,7 @@ class TestSystemNTP(VyOSUnitTestSHIM.TestCase):
         self.cli_delete(['vrf', 'name', vrf_name])
 
     def test_leap_seconds(self):
-        servers = ['time1.vyos.net', 'time2.vyos.net']
+        servers = ['time1.google.com', 'time2.google.com']
         for server in servers:
             self.cli_set(base_path + ['server', server])
 
