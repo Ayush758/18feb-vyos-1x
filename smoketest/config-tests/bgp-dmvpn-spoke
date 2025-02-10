@@ -38,9 +38,9 @@ set service dhcp-server shared-network-name LAN-3 subnet 172.17.1.0/24 range 0 s
 set service dhcp-server shared-network-name LAN-3 subnet 172.17.1.0/24 subnet-id '1'
 set service ntp allow-client address '0.0.0.0/0'
 set service ntp allow-client address '::/0'
-set service ntp server time1.vyos.net
-set service ntp server time2.vyos.net
-set service ntp server time3.vyos.net
+set service ntp server time1.google.com
+set service ntp server time2.google.com
+set service ntp server time3.google.com
 set system config-management commit-revisions '100'
 set system conntrack modules ftp
 set system conntrack modules h323

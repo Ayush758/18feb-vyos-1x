@@ -34,11 +34,11 @@ set system conntrack modules tftp
 set system console device ttyS0 speed '115200'
 set system domain-name 'vyos.io'
 set system host-name 'devray'
-set system login user devray authentication encrypted-password '$6$2Ta6TWHd/U$NmrX0x9kexCimeOcYK1MfhMpITF9ELxHcaBU/znBq.X2ukQOj61fVI2UYP/xBzP4QtiTcdkgs7WOQMHWsRymO/'
+set system login user devray authentication encrypted-password '$6$BKTwugKr1NG2E2Oy$ybiv71R8nwNqy77ADUySsgdlscUm8ib0EgIQbqIVHKkPrznsTUqejn9pUJLLITqoa3EtE3vd3HRkBSDGh1Ylv1'
 set system login user devray authentication plaintext-password ''
-set service ntp server time1.vyos.net
-set service ntp server time2.vyos.net
-set service ntp server time3.vyos.net
+set service ntp server time1.google.com
+set service ntp server time2.google.com
+set service ntp server time3.google.com
 set system syslog local facility all level 'info'
 set system syslog local facility local7 level 'debug'
 set system time-zone 'Europe/Berlin'

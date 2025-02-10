@@ -32,9 +32,9 @@ set protocols static route 0.0.0.0/0 next-hop 100.64.10.0
 set protocols static route 172.20.0.0/16 blackhole distance '200'
 set service ntp allow-client address '0.0.0.0/0'
 set service ntp allow-client address '::/0'
-set service ntp server time1.vyos.net
-set service ntp server time2.vyos.net
-set service ntp server time3.vyos.net
+set service ntp server time1.google.com
+set service ntp server time2.google.com
+set service ntp server time3.google.com
 set system config-management commit-revisions '100'
 set system conntrack modules ftp
 set system conntrack modules h323
