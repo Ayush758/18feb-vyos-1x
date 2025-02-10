@@ -104,8 +104,8 @@ service {
             subnet 192.168.0.0/24 {
                 default-router 192.168.0.1
                 dns-server 192.168.0.1
-                domain-name vyos.net
-                domain-search vyos.net
+                domain-name devray.net
+                domain-search devray.net
                 range LANDynamic {
                     start 192.168.0.30
                     stop 192.168.0.240
@@ -140,7 +140,7 @@ service {
                         stop fe88:0000:0000:ff::
                     }
                 }
-                domain-search vyos.net
+                domain-search devray.net
                 name-server fe88::1
                 prefix-delegation {
                     start fe88:0000:0000:0001:: {
@@ -158,7 +158,7 @@ service {
                         stop fe89:0000:0000:ff::
                     }
                 }
-                domain-search vyos.net
+                domain-search devray.net
                 name-server fe89::1
                 prefix-delegation {
                     start fe89:0000:0000:0001:: {

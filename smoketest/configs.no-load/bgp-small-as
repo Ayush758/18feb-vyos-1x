@@ -531,7 +531,7 @@ service {
                 default-router 10.0.151.238
                 dns-server 10.0.150.2
                 dns-server 10.0.150.1
-                domain-name vyos.net
+                domain-name devray.net
                 failover {
                     local-address 10.0.151.236
                     name NET-VYOS-DHCP-1
@@ -550,7 +550,7 @@ service {
                 default-router 10.0.150.190
                 dns-server 10.0.150.2
                 dns-server 10.0.150.1
-                domain-name vyos.net
+                domain-name devray.net
                 failover {
                     local-address 10.0.150.188
                     name NET-VYOS-HOSTING-1
@@ -621,7 +621,7 @@ system {
             speed 115200
         }
     }
-    domain-name vyos.net
+    domain-name devray.net
     host-name devray
     login {
         banner {

@@ -1262,8 +1262,8 @@ service {
             authoritative
             subnet 172.16.37.0/24 {
                 default-router 172.16.37.254
-                domain-name vyos.net
-                domain-search vyos.net
+                domain-name devray.net
+                domain-search devray.net
                 lease 86400
                 name-server 172.16.254.30
                 ntp-server 172.16.254.30
@@ -1297,8 +1297,8 @@ service {
             authoritative
             subnet 172.31.0.0/24 {
                 default-router 172.31.0.254
-                domain-name vyos.net
-                domain-search vyos.net
+                domain-name devray.net
+                domain-search devray.net
                 lease 86400
                 name-server 172.31.0.254
                 range 0 {
@@ -1311,8 +1311,8 @@ service {
             authoritative
             subnet 172.16.33.0/24 {
                 default-router 172.16.33.254
-                domain-name vyos.net
-                domain-search vyos.net
+                domain-name devray.net
+                domain-search devray.net
                 lease 86400
                 name-server 172.16.254.30
                 ntp-server 172.16.254.30
@@ -1407,7 +1407,7 @@ service {
             authorization ro
             network 172.16.100.0/24
         }
-        contact "VyOS"
+        contact "devray"
         listen-address 172.16.254.30 {
             port 161
         }
@@ -1448,7 +1448,7 @@ system {
             speed 115200
         }
     }
-    domain-name vyos.net
+    domain-name devray.net
     host-name r1
     login {
         user devray {

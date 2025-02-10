@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright (C) 2021-2024 VyOS maintainers and contributors
+# Copyright (C) 2021-2024 DevRay Router maintainers and contributors
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License version 2 or later as
@@ -445,7 +445,7 @@ start ()
     gen_duid || log_failure_msg "could not generate DUID"
 
     # Mount a temporary filesystem for container networks.
-    # Configuration should be loaded from VyOS cli.
+    # Configuration should be loaded from DevRay Router cli.
     cni_dir="/etc/cni/net.d"
     [ ! -d ${cni_dir} ] && mkdir -p ${cni_dir}
     mount -t tmpfs none ${cni_dir}
@@ -459,7 +459,7 @@ start ()
     nfct helper add tns inet6 tcp
     nft --file /usr/share/vyos/vyos-firewall-init.conf || log_failure_msg "could not initiate firewall rules"
 
-    # As VyOS does not execute commands that are not present in the CLI we call
+    # As DevRay Router does not execute commands that are not present in the CLI we call
     # the script by hand to have a single source for the login banner and MOTD
     ${vyos_conf_scripts_dir}/system_syslog.py || log_failure_msg "could not reset syslog"
     ${vyos_conf_scripts_dir}/system_console.py || log_failure_msg "could not reset serial console"
@@ -489,7 +489,7 @@ start ()
         update-ca-certificates >/dev/null 2>&1
     fi
 
-    log_action_begin_msg "Mounting VyOS Config"
+    log_action_begin_msg "Mounting DevRay Router Config"
     # ensure the vyatta_configdir supports a large number of inodes since
     # the config hierarchy is often inode-bound (instead of size).
     # impose a minimum and then scale up dynamically with the actual size
@@ -517,7 +517,7 @@ start ()
 
     cleanup_post_commit_hooks
 
-    log_daemon_msg "Starting VyOS router"
+    log_daemon_msg "Starting DevRay Router router"
     disabled migrate || migrate_bootfile
 
     restore_if_missing_preconfig_script
@@ -562,7 +562,7 @@ start ()
 stop()
 {
     local -i status=0
-    log_daemon_msg "Stopping VyOS router"
+    log_daemon_msg "Stopping DevRay Router router"
     for ((i=${#sub_inits[@]} - 1; i >= 0; i--)) ; do
     s=${subinit[$i]}
     log_progress_msg $s
@@ -570,7 +570,7 @@ stop()
     let status\|=$?
     done
     log_end_msg $status
-    log_action_begin_msg "Un-mounting VyOS Config"
+    log_action_begin_msg "Un-mounting DevRay Router Config"
     umount ${vyatta_configdir}
     log_action_end_msg $?
 

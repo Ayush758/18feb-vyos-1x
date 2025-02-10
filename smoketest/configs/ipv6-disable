@@ -44,7 +44,7 @@ system {
             speed 115200
         }
     }
-    domain-name vyos.net
+    domain-name devray.net
     host-name devray
     ipv6 {
         disable

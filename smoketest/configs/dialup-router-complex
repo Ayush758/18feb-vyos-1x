@@ -1293,8 +1293,8 @@ service {
             subnet 172.16.37.0/24 {
                 default-router 172.16.37.254
                 dns-server 172.16.254.30
-                domain-name vyos.net
-                domain-search vyos.net
+                domain-name devray.net
+                domain-search devray.net
                 lease 86400
                 ntp-server 172.16.254.30
                 range 0 {
@@ -1312,8 +1312,8 @@ service {
             subnet 172.31.0.0/24 {
                 default-router 172.31.0.254
                 dns-server 172.31.0.254
-                domain-name vyos.net
-                domain-search vyos.net
+                domain-name devray.net
+                domain-search devray.net
                 lease 86400
                 range 0 {
                     start 172.31.0.100
@@ -1334,8 +1334,8 @@ service {
             subnet 172.16.35.0/24 {
                 default-router 172.16.35.254
                 dns-server 172.16.254.30
-                domain-name vyos.net
-                domain-search vyos.net
+                domain-name devray.net
+                domain-search devray.net
                 lease 86400
                 ntp-server 172.16.254.30
                 range 0 {
@@ -1349,8 +1349,8 @@ service {
             subnet 172.16.33.0/24 {
                 default-router 172.16.33.254
                 dns-server 172.16.254.30
-                domain-name vyos.net
-                domain-search vyos.net
+                domain-name devray.net
+                domain-search devray.net
                 lease 86400
                 ntp-server 172.16.254.30
                 range 0 {
@@ -1462,7 +1462,7 @@ system {
             speed 115200
         }
     }
-    domain-name vyos.net
+    domain-name devray.net
     host-name devray
     login {
         user devray {

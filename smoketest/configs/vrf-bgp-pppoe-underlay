@@ -323,7 +323,7 @@ system {
             speed 115200
         }
     }
-    domain-name vyos.net
+    domain-name devray.net
     host-name devray
     login {
         user devray {

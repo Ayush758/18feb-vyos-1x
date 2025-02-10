@@ -265,7 +265,7 @@ system {
             speed 115200
         }
     }
-    domain-name vyos.net
+    domain-name devray.net
     flow-accounting {
         interface eth1
         interface vti31
