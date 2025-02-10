@@ -1,12 +1,12 @@
 [Unit]
-Description=VyOS root partition auto resizing
+Description=DevRay Router root partition auto resizing
 After=multi-user.target
 
 [Service]
 Type=oneshot
 User=root
 Group=root
-ExecStart=/usr/libexec/vyos/op_mode/force_root-partition-auto-resize.sh 
+ExecStart=/usr/libexec/vyos/op_mode/force_root-partition-auto-resize.sh
 
 [Install]
 WantedBy=vyos.target

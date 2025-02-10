@@ -96,9 +96,9 @@ system {
             tftp
         }
     }
-    host-name vyos
+    host-name devray
     login {
-        user vyos {
+        user devray {
             authentication {
                 encrypted-password $6$r/Yw/07NXNY$/ZB.Rjf9jxEV.BYoDyLdH.kH14rU52pOBtrX.4S34qlPt77chflCHvpTCq9a6huLzwaMR50rEICzA5GoIRZlM0
                 plaintext-password ""

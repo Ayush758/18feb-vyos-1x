@@ -1,5 +1,5 @@
 [Unit]
-Description=VyOS Router
+Description=DevRay Router
 After=systemd-journald-dev-log.socket time-sync.target local-fs.target cloud-config.service
 Conflicts=shutdown.target
 Before=systemd-user-sessions.service

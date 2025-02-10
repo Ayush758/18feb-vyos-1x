@@ -1,5 +1,5 @@
 [Unit]
-Description=VyOS vyconf daemon
+Description=DevRay Router vyconf daemon
 
 # Without this option, lots of default dependencies are added,
 # among them network.target, which creates a dependency cycle

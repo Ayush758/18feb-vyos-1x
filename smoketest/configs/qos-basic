@@ -45,9 +45,9 @@ system {
             speed 115200
         }
     }
-    host-name vyos
+    host-name devray
     login {
-        user vyos {
+        user devray {
             authentication {
                 encrypted-password $6$r/Yw/07NXNY$/ZB.Rjf9jxEV.BYoDyLdH.kH14rU52pOBtrX.4S34qlPt77chflCHvpTCq9a6huLzwaMR50rEICzA5GoIRZlM0
                 plaintext-password ""
@@ -188,4 +188,3 @@ traffic-policy {
 // Warning: Do not remove the following line.
 // vyos-config-version: "broadcast-relay@1:cluster@1:config-management@1:conntrack@3:conntrack-sync@2:dhcp-relay@2:dhcp-server@6:dhcpv6-server@1:dns-forwarding@3:firewall@5:https@2:interfaces@22:ipoe-server@1:ipsec@5:isis@1:l2tp@3:lldp@1:mdns@1:nat@5:ntp@1:pppoe-server@5:pptp@2:qos@1:quagga@8:rpki@1:salt@1:snmp@2:ssh@2:sstp@3:system@21:vrrp@2:vyos-accel-ppp@2:wanloadbalance@3:webproxy@2:zone-policy@1"
 // Release version: 1.3.1
-

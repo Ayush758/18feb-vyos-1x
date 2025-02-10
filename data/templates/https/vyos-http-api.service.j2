@@ -1,6 +1,6 @@
 {% set vrf_command = 'ip vrf exec ' ~ vrf ~ ' ' if vrf is vyos_defined else '' %}
 [Unit]
-Description=VyOS HTTP API service
+Description=DevRay Router HTTP API service
 After=vyos-router.service
 Requires=vyos-router.service
 ConditionPathExists={{ api_config_state }}

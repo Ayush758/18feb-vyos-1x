@@ -682,10 +682,10 @@ set system conntrack modules tftp
 set system conntrack table-size '262144'
 set system conntrack timeout
 set system console device ttyS0 speed '115200'
-set system domain-name 'vyos.net'
+set system domain-name 'devray.net'
 set system host-name 'r1'
-set system login user vyos authentication encrypted-password '$6$2Ta6TWHd/U$NmrX0x9kexCimeOcYK1MfhMpITF9ELxHcaBU/znBq.X2ukQOj61fVI2UYP/xBzP4QtiTcdkgs7WOQMHWsRymO/'
-set system login user vyos authentication plaintext-password ''
+set system login user devray authentication encrypted-password '$6$2Ta6TWHd/U$NmrX0x9kexCimeOcYK1MfhMpITF9ELxHcaBU/znBq.X2ukQOj61fVI2UYP/xBzP4QtiTcdkgs7WOQMHWsRymO/'
+set system login user devray authentication plaintext-password ''
 set system name-server '172.16.254.30'
 set system option ctrl-alt-delete 'ignore'
 set system option performance 'network-latency'

@@ -1,5 +1,5 @@
 [Unit]
-Description=VyOS network-event logger daemon
+Description=DevRay Router network-event logger daemon
 
 # Seemingly sensible way to say "as early as the system is ready"
 # All vyos-configd needs is read/write mounted root

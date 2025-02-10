@@ -951,7 +951,7 @@ interfaces {
     pppoe pppoe0 {
         authentication {
             password vyos
-            user vyos
+            user devray
         }
         default-route force
         dhcpv6-options {
@@ -1451,7 +1451,7 @@ system {
     domain-name vyos.net
     host-name r1
     login {
-        user vyos {
+        user devray {
             authentication {
                 encrypted-password $6$2Ta6TWHd/U$NmrX0x9kexCimeOcYK1MfhMpITF9ELxHcaBU/znBq.X2ukQOj61fVI2UYP/xBzP4QtiTcdkgs7WOQMHWsRymO/
                 plaintext-password ""

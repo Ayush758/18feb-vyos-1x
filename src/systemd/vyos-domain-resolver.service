@@ -1,5 +1,5 @@
 [Unit]
-Description=VyOS firewall domain resolver
+Description=DevRay Router firewall domain resolver
 After=vyos-router.service
 ConditionPathExistsGlob=/run/use-vyos-domain-resolver*
 

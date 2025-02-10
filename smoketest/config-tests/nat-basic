@@ -13,8 +13,8 @@ set interfaces ethernet eth2 offload rps
 set interfaces ethernet eth3 offload gro
 set interfaces ethernet eth3 offload rps
 set interfaces loopback lo
-set interfaces pppoe pppoe7 authentication password 'vyos'
-set interfaces pppoe pppoe7 authentication username 'vyos'
+set interfaces pppoe pppoe7 authentication password 'devray'
+set interfaces pppoe pppoe7 authentication username 'devray'
 set interfaces pppoe pppoe7 dhcpv6-options pd 0 interface bond10.50 address '1'
 set interfaces pppoe pppoe7 dhcpv6-options pd 0 length '56'
 set interfaces pppoe pppoe7 ip adjust-mss '1452'
@@ -78,10 +78,10 @@ set system conntrack modules sip
 set system conntrack modules sqlnet
 set system conntrack modules tftp
 set system console device ttyS0 speed '115200'
-set system domain-name 'vyos.net'
+set system domain-name 'devray.net'
 set system host-name 'R1'
-set system login user vyos authentication encrypted-password '$6$2Ta6TWHd/U$NmrX0x9kexCimeOcYK1MfhMpITF9ELxHcaBU/znBq.X2ukQOj61fVI2UYP/xBzP4QtiTcdkgs7WOQMHWsRymO/'
-set system login user vyos authentication plaintext-password ''
+set system login user devray authentication encrypted-password '$6$2Ta6TWHd/U$NmrX0x9kexCimeOcYK1MfhMpITF9ELxHcaBU/znBq.X2ukQOj61fVI2UYP/xBzP4QtiTcdkgs7WOQMHWsRymO/'
+set system login user devray authentication plaintext-password ''
 set system name-server '1.1.1.1'
 set system name-server '9.9.9.9'
 set system syslog local facility all level 'info'

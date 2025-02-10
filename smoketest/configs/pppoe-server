@@ -70,11 +70,11 @@ system {
             speed 115200
         }
     }
-    host-name vyos
+    host-name devray
     login {
-        user vyos {
+        user devray {
             authentication {
-                encrypted-password $6$O5gJRlDYQpj$MtrCV9lxMnZPMbcxlU7.FI793MImNHznxGoMFgm3Q6QP3vfKJyOSRCt3Ka/GzFQyW1yZS4NS616NLHaIPPFHc0
+                encrypted-password $6$BKTwugKr1NG2E2Oy$ybiv71R8nwNqy77ADUySsgdlscUm8ib0EgIQbqIVHKkPrznsTUqejn9pUJLLITqoa3EtE3vd3HRkBSDGh1Ylv1
                 plaintext-password ""
             }
         }

@@ -1,5 +1,5 @@
 [Unit]
-Description=VyOS conntrack logger daemon
+Description=DevRay Router conntrack logger daemon
 
 # Seemingly sensible way to say "as early as the system is ready"
 # All vyos-configd needs is read/write mounted root

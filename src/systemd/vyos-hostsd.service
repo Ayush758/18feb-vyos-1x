@@ -1,5 +1,5 @@
 [Unit]
-Description=VyOS DNS configuration keeper
+Description=DevRay Router DNS configuration keeper
 
 # Without this option, lots of default dependencies are added,
 # among them network.target, which creates a dependency cycle

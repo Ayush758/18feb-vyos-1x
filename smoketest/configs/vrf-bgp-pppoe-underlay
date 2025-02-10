@@ -13,7 +13,7 @@ interfaces {
     dummy dum0 {
         address 100.64.51.252/32
         address 2001:db8:200:ffff::1/128
-        vrf vyos-test-01
+        vrf devray-test-01
     }
     ethernet eth0 {
         offload {
@@ -30,18 +30,18 @@ interfaces {
         vif 5 {
             address 2001:db8:200:f0::114/64
             address 100.64.50.121/28
-            vrf vyos-test-01
+            vrf devray-test-01
         }
         vif 10 {
             address 2001:db8:200:10::ffff/64
             address 2001:db8:200::ffff/64
             address 100.64.50.62/26
-            vrf vyos-test-01
+            vrf devray-test-01
         }
         vif 15 {
             address 100.64.50.78/28
             address 2001:db8:200:15::ffff/64
-            vrf vyos-test-01
+            vrf devray-test-01
         }
         vif 50 {
             description "Member of bridge br50"
@@ -50,37 +50,37 @@ interfaces {
             address 100.64.51.190/27
             address 100.64.51.158/28
             address 2001:db8:200:101::ffff/64
-            vrf vyos-test-01
+            vrf devray-test-01
         }
         vif 410 {
             address 100.64.51.206/28
             address 2001:db8:200:104::ffff/64
-            vrf vyos-test-01
+            vrf devray-test-01
         }
         vif 500 {
             address 100.64.51.238/28
             address 2001:db8:200:50::ffff/64
-            vrf vyos-test-01
+            vrf devray-test-01
         }
         vif 520 {
             address 100.64.50.190/28
             address 2001:db8:200:520::ffff/64
-            vrf vyos-test-01
+            vrf devray-test-01
         }
         vif 666 {
             address 2001:db8:200:ff::101:1/112
             address 100.64.51.223/31
-            vrf vyos-test-01
+            vrf devray-test-01
         }
         vif 800 {
             address 2001:db8:200:ff::104:1/112
             address 100.64.51.212/31
-            vrf vyos-test-01
+            vrf devray-test-01
         }
         vif 810 {
             address 100.64.51.30/27
             address 2001:db8:200:102::ffff/64
-            vrf vyos-test-01
+            vrf devray-test-01
         }
     }
     ethernet eth1 {
@@ -143,15 +143,15 @@ interfaces {
     virtual-ethernet veth0 {
         address 100.64.51.220/31
         address 2001:db8:200:ff::105:1/112
-        description "Core: connect vyos-test-01 and default VRF"
+        description "Core: connect devray-test-01 and default VRF"
         peer-name veth1
     }
     virtual-ethernet veth1 {
         address 100.64.51.221/31
         address 2001:db8:200:ff::105:2/112
-        description "Core: connect vyos-test-01 and default VRF"
+        description "Core: connect devray-test-01 and default VRF"
         peer-name veth0
-        vrf vyos-test-01
+        vrf devray-test-01
     }
     wireguard wg500 {
         address 100.64.51.209/31
@@ -164,7 +164,7 @@ interfaces {
         }
         port 5500
         private-key iLJh6Me6AdPJtNv3dgGhUbtyFxExxmNU4v0Fs6YE2Xc=
-        vrf vyos-test-01
+        vrf devray-test-01
     }
     wireguard wg501 {
         address 2001:db8:200:ff::102:2/112
@@ -177,7 +177,7 @@ interfaces {
         }
         port 5501
         private-key 0MP5X0PW58O4q2LDpuIXgZ0ySyAoWH8/kdpvQccCbUU=
-        vrf vyos-test-01
+        vrf devray-test-01
     }
     wireguard wg666 {
         address 172.29.0.0/31
@@ -324,11 +324,11 @@ system {
         }
     }
     domain-name vyos.net
-    host-name vyos
+    host-name devray
     login {
-        user vyos {
+        user devray {
             authentication {
-                encrypted-password $6$O5gJRlDYQpj$MtrCV9lxMnZPMbcxlU7.FI793MImNHznxGoMFgm3Q6QP3vfKJyOSRCt3Ka/GzFQyW1yZS4NS616NLHaIPPFHc0
+                encrypted-password $6$BKTwugKr1NG2E2Oy$ybiv71R8nwNqy77ADUySsgdlscUm8ib0EgIQbqIVHKkPrznsTUqejn9pUJLLITqoa3EtE3vd3HRkBSDGh1Ylv1
                 plaintext-password ""
             }
         }
@@ -348,7 +348,7 @@ system {
 }
 vrf {
     bind-to-all
-    name vyos-test-01 {
+    name devray-test-01 {
         protocols {
             bgp {
                 address-family {

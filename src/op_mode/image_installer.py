@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 #
-# Copyright 2023-2025 VyOS maintainers and contributors <maintainers@vyos.io>
+# Copyright 2023-2025 DevRay Router maintainers and contributors <maintainers@vyos.io>
 #
-# This file is part of VyOS.
+# This file is part of DevRay Router.
 #
-# VyOS is free software: you can redistribute it and/or modify it under the
+# DevRay Router is free software: you can redistribute it and/or modify it under the
 # terms of the GNU General Public License as published by the Free Software
 # Foundation, either version 3 of the License, or (at your option) any later
 # version.
 #
-# VyOS is distributed in the hope that it will be useful, but WITHOUT ANY
+# DevRay Router is distributed in the hope that it will be useful, but WITHOUT ANY
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
 # FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
 # details.
 #
 # You should have received a copy of the GNU General Public License along with
-# VyOS. If not, see <https://www.gnu.org/licenses/>.
+# DevRay Router. If not, see <https://www.gnu.org/licenses/>.
 
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
@@ -52,8 +52,8 @@ MSG_ERR_FLAVOR_MISMATCH: str = 'The current image flavor is "{0}", the new image
 MSG_ERR_MISSING_ARCHITECTURE: str = 'The new image version data does not specify architecture, cannot check compatibility (is it a legacy release image?)'
 MSG_ERR_MISSING_FLAVOR: str = 'The new image version data does not specify flavor, cannot check compatibility (is it a legacy release image?)'
 MSG_ERR_CORRUPT_CURRENT_IMAGE: str = 'Version data in the current image is malformed: missing flavor and/or architecture fields. Upgrade compatibility cannot be checked.'
-MSG_INFO_INSTALL_WELCOME: str = 'Welcome to VyOS installation!\nThis command will install VyOS to your permanent storage.'
-MSG_INFO_INSTALL_EXIT: str = 'Exiting from VyOS installation'
+MSG_INFO_INSTALL_WELCOME: str = 'Welcome to DevRay Router installation!\nThis command will install DevRay Router to your permanent storage.'
+MSG_INFO_INSTALL_EXIT: str = 'Exiting from DevRay Router installation'
 MSG_INFO_INSTALL_SUCCESS: str = 'The image installed successfully; please reboot now.'
 MSG_INFO_INSTALL_DISKS_LIST: str = 'The following disks were found:'
 MSG_INFO_INSTALL_DISK_SELECT: str = 'Which one should be used for installation?'
@@ -68,8 +68,8 @@ MSG_INPUT_CONFIG_CHOICE: str = 'The following config files are available for boo
 MSG_INPUT_CONFIG_CHOOSE: str = 'Which file would you like as boot config?'
 MSG_INPUT_IMAGE_NAME: str = 'What would you like to name this image?'
 MSG_INPUT_IMAGE_DEFAULT: str = 'Would you like to set the new image as the default one for boot?'
-MSG_INPUT_PASSWORD: str = 'Please enter a password for the "vyos" user:'
-MSG_INPUT_PASSWORD_CONFIRM: str = 'Please confirm password for the "vyos" user:'
+MSG_INPUT_PASSWORD: str = 'Please enter a password for the "devray" user:'
+MSG_INPUT_PASSWORD_CONFIRM: str = 'Please confirm password for the "devray" user:'
 MSG_INPUT_ROOT_SIZE_ALL: str = 'Would you like to use all the free space on the drive?'
 MSG_INPUT_ROOT_SIZE_SET: str = 'Please specify the size (in GB) of the root partition (min is 1.5 GB)?'
 MSG_INPUT_CONSOLE_TYPE: str = 'What console should be used by default? (K: KVM, S: Serial)?'
@@ -486,7 +486,7 @@ def configure_authentication(config_file: str, password: str) -> None:
 
     config = ConfigTree(config_string)
     config.set([
-        'system', 'login', 'user', 'vyos', 'authentication',
+        'system', 'login', 'user', 'devray', 'authentication',
         'encrypted-password'
     ],
                value=encrypted_password,
@@ -878,7 +878,7 @@ def install_image() -> None:
                 disk.partition_mount(disk_target.partition['efi'], f'{DIR_DST_ROOT}/boot/efi')
                 grub.install(disk_target.name, f'{DIR_DST_ROOT}/boot/',
                              f'{DIR_DST_ROOT}/boot/efi',
-                             id=f'VyOS (RAID disk {l.index(disk_target) + 1})')
+                             id=f'DevRay Router (RAID disk {l.index(disk_target) + 1})')
                 disk.partition_umount(disk_target.partition['efi'])
         else:
             print('Installing GRUB to the drive')
@@ -903,7 +903,7 @@ def install_image() -> None:
         exit()
 
     except Exception as err:
-        print(f'Unable to install VyOS: {err}')
+        print(f'Unable to install DevRay Router: {err}')
         # unmount filesystems and clenup
         try:
             if install_target is not None:
