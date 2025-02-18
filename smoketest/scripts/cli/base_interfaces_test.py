@@ -243,7 +243,7 @@ class BasicInterfaceTest:
             if not self._test_dhcp or not self._test_vrf:
                 self.skipTest('not supported')
 
-            client_id = 'VyOS-router'
+            client_id = 'DevRay-router'
             distance = '100'
             hostname = 'vyos'
             vendor_class_id = 'vyos-vendor'
